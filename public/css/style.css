@@ -1,0 +1,270 @@
+:root{
+    font-size: 62.5%;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+
+}
+
+a{
+    color:#2b2b2b;
+    transition: .4s;
+    text-decoration: none;
+}
+
+a:hover{
+    color: #0066ff;
+}
+
+
+body{
+    background-color: #f2f2f2;
+}
+
+img{
+    width: 100%;
+}
+
+.icon--white{
+    color: #fff!important;
+}
+
+.products{
+    max-width: 760px;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: auto;
+    margin-top: 5%;
+    padding:0 1rem;
+}
+
+.dg-card{
+    width: 190px;
+    max-height: 370px;
+    border: 1px solid #ebebeb;
+    background-color: #fdfdfd;
+    border-radius: .4rem;
+    box-shadow: 2px 2px 6px  rgba(200, 200, 200, .3);
+    
+    overflow: hidden;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+
+    position: relative;
+    
+    transition: .4s;
+}
+.dg-card .dg-card__img{
+    padding: 2rem 2rem 0rem;
+    width: 100%;
+   
+}
+
+.dg-card .dg-card__view_img{
+    
+    position: absolute;
+    top: 0rem;
+    left: 0;
+    bottom: 0;
+    right: 0;
+  
+    transition: .4s;
+}
+
+.dg-card .dg-card__view_img .icon--white{
+    font-size: 1.2rem ;
+
+}
+
+.dg-card:hover .dg-card__view_img{
+    top: 0;
+    background-color: rgba(0, 0, 0, .6);
+    cursor: pointer;
+
+}
+
+.dg-card .dg-card__eyebutton{
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 0;
+    height: 0;
+    background-color: #0066ff;
+    overflow: hidden;
+
+    border: none;
+    outline: none;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: .4s ;
+}
+
+.dg-card .dg-card__eyebutton:hover{
+    background-color: #0455cf;
+}
+
+.dg-card:hover .dg-card__eyebutton{
+    width: 3.6rem;
+    height: 3.6rem;
+}
+
+
+.dg-card__desconto{
+    width: 4rem;
+    
+    background-color: #f44336;
+    color: #fff;
+    display: block;
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-align: right;
+    
+    padding: .8rem;
+    position: absolute;
+    right: 0;
+    top: 3rem;
+
+    z-index: 2;
+}
+
+.dg-card__desconto::before{
+    position: absolute;
+    top: -2px;
+    left: -15px;
+    content: '';
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-bottom: 31px solid #f44336;
+    border-left: 16px solid transparent;
+
+}
+
+.dg-card .dg-card__details{
+    width: 100%;
+    height: 100%;
+    padding: 1.5rem 1.5rem 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+
+    border-radius: .9rem .9rem 0 0;
+    position: relative;
+    top: 0rem;
+    box-shadow: 3px 3px 6px  rgba(100, 100, 100, .6);
+
+    
+
+    background-color: #fff;
+    transition: .4s;
+}
+.dg-card:hover .dg-card__details{
+    top:-4rem;
+}
+
+
+.dg-card .dg-card__rating .dg-card--icon{
+    font-size: 1.4rem;
+    
+}
+
+.dg-icon--fill{
+    color: #ffcc00;
+}
+
+.dg-icon--unfill{
+    color: #999;
+}
+
+.dg-card .dg-card__title{
+    text-align: center;
+    font-weight: 100;
+    font-size: 1.6rem;
+   
+}
+.dg-card .dg-card__price{
+    text-align: center;;
+}
+
+.dg-card .dg-card__current_price{
+    font-size: 1.8rem;
+    color: #0066ff
+}
+
+.dg-card .dg-card__last_price{
+    font-size: 1.2rem;
+    text-decoration: line-through;
+    color: #b6b6bd;
+
+    font-weight: 500;
+}
+.dg-card .dg-card__actions{
+    width: 100%;
+    background-color: #fff;
+    padding: 1rem;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+
+    position: absolute;
+    bottom: -6rem;
+    transition: .4s;
+}
+
+.dg-card:hover .dg-card__actions{
+    display: flex;
+    bottom: 0;
+}
+
+
+.dg-card .dg-card__actions--buttons{
+    padding: 10px;
+    border-radius: 50%;
+    outline: none;
+    border: none;
+    background-color: #fff;
+
+    cursor: pointer;
+    
+}
+
+.dg-card .dg-card__actions .dg-card--icon{
+    font-size: 1.4rem ;
+    color: #999;
+    transition: .4s;
+}
+.dg-card .dg-card__favore{
+    border: 1px solid #999;
+    transition: .4s;
+}
+
+.dg-card .dg-card__favore:hover{
+    border: 1px solid #0066ff;
+}
+
+.dg-card .dg-card__favore:hover .dg-card--icon{
+    color:#0066ff;
+}
+
+
+
+.dg-card .dg-card__actions .dg-card__cart{
+    background-color: #0066ff;
+    transition: .4s;
+}
+
+.dg-card .dg-card__actions .dg-card__cart:hover{
+    background-color: #0455cf;
+}
